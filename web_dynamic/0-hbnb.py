@@ -26,6 +26,7 @@ def hbnb():
     amenities = storage.all("Amenity").values()
     places_tmp = storage.all("Place").values()
     owners = storage.all("User")
+    cache_id = uuid.uuid4()
     places = []
     for k, v in owners.items():
         for place in places_tmp:
@@ -34,7 +35,8 @@ def hbnb():
                     v.first_name, v.last_name), place])
     places.sort(key=lambda x: x[1].name)
     return render_template("100-hbnb.html",
-                           amenities=amenities, result=states, places=places)
+                           amenities=amenities, result=states, places=places
+                           cache_id=cache_id)
 
 
 @app.teardown_appcontext
