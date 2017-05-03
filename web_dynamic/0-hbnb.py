@@ -20,7 +20,7 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route('/hbnb/')
+@app.route('/0-hbnb/')
 def hbnb():
     states = storage.all("State").values()
     amenities = storage.all("Amenity").values()
