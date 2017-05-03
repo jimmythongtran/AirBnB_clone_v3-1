@@ -35,7 +35,7 @@ def hbnb():
                     v.first_name, v.last_name), place])
     places.sort(key=lambda x: x[1].name)
     return render_template("0-hbnb.html",
-                           amenities=amenities, result=states, places=places
+                           amenities=amenities, result=states, places=places,
                            cache_id=cache_id)
 
 
