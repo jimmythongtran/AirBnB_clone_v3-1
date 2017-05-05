@@ -1,4 +1,4 @@
-$( document ).ready(function( {
+$( document ).ready(function() {
   let storeDict = {};
   $('.small-list li input').change(function() {
     if $('.small-list li input').checked {
@@ -11,4 +11,3 @@ $( document ).ready(function( {
   $('.amenities H4').text(totalString);
   })
 );
-
