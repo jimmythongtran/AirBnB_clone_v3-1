@@ -9,3 +9,15 @@ header {
     content:url(../images/logo.png);
     left: 20px;
 }
+
+#api_status {
+  text-align: right;
+  circle-diameter: 40px;
+  center: vertically;
+  border-right: 30px;
+  background-color: #cccccc;
+}
+
+available {
+	background-color: #ff545f;
+}
