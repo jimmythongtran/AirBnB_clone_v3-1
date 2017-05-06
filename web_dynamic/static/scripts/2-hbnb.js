@@ -3,7 +3,6 @@ $(document).ready(function () {
 
   $.get(url, function (response, textStatus) {
     if (response.status === 'OK') {
-		alert(response.status);
       $('DIV#api_status').addClass('available');
     } else {
       $('DIV#api_status').removeClass('available');
