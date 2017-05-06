@@ -1,17 +1,11 @@
-
 $(document).ready(function () {
-  const request = require('request');
   const url = 'http://0.0.0.0:5001/api/v1/status/';
 
-  request(url, function (error, response) {
-    if (error) {
-      console.log(error);
+  $.get(url, function (response) {
+    if (response.status === 'OK') {
+      $('DIV#api_status').addClass('.available');
     } else {
-      if (response === 'OK') {
-        $('DIV#api_status').append('.available');
-      } else {
-        delete $('available');
-      }
+      $('DIV#api_status').removeClass('available');
     }
   });
 
