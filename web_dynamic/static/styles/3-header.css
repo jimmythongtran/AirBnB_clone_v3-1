@@ -12,7 +12,7 @@ header {
     justify-content: center;
 }
 
-api_status {
+#api_status {
 	top: 50%;
 	bottom: 50%;
 	align-self: flex-end;
